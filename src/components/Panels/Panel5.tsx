@@ -58,8 +58,8 @@ export function Panel5({ style = {}, selectionStyle = {} }: Panel5Props) {
       posY.value = withTiming(row, { duration: 300, easing: Easing.elastic(0.8) });
 
       setAdaptiveColor(color);
-      onGestureChange();
-      onGestureEnd();
+      onGestureChange(color);
+      onGestureEnd(color);
     });
 
   const onLayout = useCallback(({ nativeEvent: { layout } }: LayoutChangeEvent) => {
